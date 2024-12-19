@@ -77,7 +77,9 @@ const typeIt = new TypeIt(`#typeit`, {
 
 typeIt
   .type('안녕하세요!<br/>')
-  .type('<strong class="home__title-color">코딩 교육 크리에이터</strong><br/>')
+  .type(
+    '<strong class="home__title-color">프론트엔드 새싹 개발자</strong><br/>',
+  )
   .type('<strong class="home__title-color">devRyan</strong>입니다!')
   .delete(11, { delay: 300 })
   .type('<strong class="home__title-color">라이언</strong>입니다!')
