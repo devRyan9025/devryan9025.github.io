@@ -84,3 +84,25 @@ typeIt
   .delete(11, { delay: 300 })
   .type('<strong class="home__title-color">라이언</strong>입니다!')
   .go();
+
+/* 이메일 클라이언트 열기 */
+const contactFormEl = document.getElementById('contactForm');
+
+contactFormEl.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  // 폼 하위 정보를 갖고
+  const name = contactFormEl.name.value;
+  const subject = contactFormEl.subject.value;
+  const message = contactFormEl.message.value;
+  const to = 'devryan9025@naver.com';
+
+  // 이메일 클라이언트 열기
+  location.href =
+    'mailto:' +
+    encodeURIComponent(to) +
+    '?subject=' +
+    encodeURIComponent(`[${name}님 문의] ${subject}`) +
+    '&body=' +
+    encodeURIComponent(message);
+});
